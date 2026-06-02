@@ -11,7 +11,6 @@ if (isset($_SESSION['erro_login'])) {
 <head>
     <meta name="viewport" >
     <title>Login-Nosso Café</title>
-    
 </head>
 <body >
         
@@ -23,7 +22,7 @@ if (isset($_SESSION['erro_login'])) {
         <input type="email" name="usuario" id="usuario" required placeholder="seu@email.com">
                 
         <label for="senha" > Senha </label>
-        <input    id="senha" type="password"  name="senha"  required >
+        <input id="senha" type="password"  name="senha"  required placeholder="*****">
         
         <button type="submit" > Entrar </button>
         
