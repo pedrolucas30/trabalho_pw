@@ -7,11 +7,11 @@
 
 </head>
 <body>
-     <form action="create.php" method="post">
-        <label for="name">Adicionar novo funcionário</label>
-        <input type="text" name ="funcionário" id ="funcionário">
+     <form action="createcard.php" method="post">
+        <label for="name">Adcionar nova comida</label>
+        <input type="text" name ="nome" id ="nome">
         <button type="submit">Salvar</button>
-        <a href="index.php"><button type="button">Cancelar</button></a>
+        <a href="indexcard.php"><button type="button">Cancelar</button></a>
      </form>      
 </body>
 </html>
@@ -19,14 +19,14 @@
 include 'conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $funcionário = $_POST['funcionário'];
+    $comida = $_POST['nome'];
 
-    $stmt = $connect->prepare("INSERT INTO funcionários (nome) VALUES (:nome)");
+    $stmt = $connect->prepare("INSERT INTO cardapio (nome) VALUES (:nome)");
 
-    $stmt->bindValue(":nome", $funcionario);
+    $stmt->bindValue(":nome", $comida);
 
     if ($stmt->execute()) {
-        header("Location: index.php");
+        header("Location: indexcard.php");
         exit();
     }  else {
         $erro = $stmt->errorInfo();
