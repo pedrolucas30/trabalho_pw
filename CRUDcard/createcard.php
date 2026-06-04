@@ -7,23 +7,31 @@
 
 </head>
 <body>
+    <h1> Adicionar novas comidas</h1><br>
      <form action="createcard.php" method="post">
-        <label for="name">Adcionar nova comida</label>
-        <input type="text" name ="nome" id ="nome">
+        <label for="name">Adcionar comida: </label>
+        <input type="text" name ="nome" id ="nome"><br>
+        <label for="name">Adcionar preço: </label>
+        <input type="number" name ="preco" id ="nome"><br>
+        <label for="name">Adcionar quantidade: </label>
+        <input type="number" name ="quant" id ="nome"><br>
         <button type="submit">Salvar</button>
         <a href="indexcard.php"><button type="button">Cancelar</button></a>
      </form>      
 </body>
 </html>
 <?php 
-include 'conexao.php';
+include '../conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $comida = $_POST['nome'];
+    $preco = $_POST['preco'];
+    $quant = $_POST['quant'];
 
-    $stmt = $connect->prepare("INSERT INTO cardapio (nome) VALUES (:nome)");
-
+    $stmt = $connect->prepare("INSERT INTO cardapio (nome, preco, quantidade) VALUES (:nome, :preco, :quantidade)");
     $stmt->bindValue(":nome", $comida);
+    $stmt->bindValue(":preco", $preco);
+    $stmt->bindValue(":quantidade", $quant);
 
     if ($stmt->execute()) {
         header("Location: indexcard.php");

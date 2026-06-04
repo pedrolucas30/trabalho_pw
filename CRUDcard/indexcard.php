@@ -1,5 +1,5 @@
 <?php 
-    include 'conexao.php';
+    include '../conexao.php';
 
     if(isset($_GET['delete_id'])) {
         $id_delete = $_GET['delete_id'];
@@ -14,7 +14,7 @@
     }
 
 
-    $query = connect->prepare("SELECT * FROM cardapio");
+    $query = $connect->prepare("SELECT * FROM cardapio");
     $query->execute();
     $lista = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -28,7 +28,7 @@
     <title>Cardapio</title>
 </head>
 <body>
-   <a href="create.php"><button> Adicionar categoria </button></a>
+   <a href="createcard.php"><button> Adicionar comida </button></a>
     <h1>Cardapio</h1>
     <table>
         <thead>
