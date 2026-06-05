@@ -12,7 +12,7 @@ if (!isset($_SESSION['usuario_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport">
-    <title>Sistema Gerenciador LN</title>
+    <title>Sistema Gerenciador Nosso Café</title>
 </head>
 <body>     
     <a href="CRUDcard/indexcard.php"><button type="submit">Cardapio</button></a>
