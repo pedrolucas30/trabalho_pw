@@ -59,5 +59,6 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+    <a href="../index.php"><button type="button">Voltar</button></a>
 </body>
 </html>

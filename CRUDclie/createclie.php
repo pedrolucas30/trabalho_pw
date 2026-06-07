@@ -1,25 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes</title>
-
-</head>
-<body>
-    <h1> Adicionar novas comidas</h1><br>
-     <form action="createclie.php" method="post">
-        <label for="name">Adcionar cliente: </label>
-        <input type="text" name ="nome" id ="nome"><br>
-        <label for="name">Adcionar bairro: </label>
-        <input type="name" name ="bairro" id ="nome"><br>
-        <label for="name">Adcionar nuemro: </label>
-        <input type="number" name ="numero" id ="nome"><br>
-        <button type="submit">Salvar</button>
-        <a href="indexclie.php"><button type="button">Cancelar</button></a>
-     </form>      
-</body>
-</html>
 <?php 
 include '../conexao.php';
 
@@ -44,3 +22,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+
+</head>
+<body>
+    <h1> Adicionar novas comidas</h1><br>
+     <form action="createclie.php" method="post">
+        <label for="name">Adcionar cliente: </label>
+        <input type="text" name ="nome" id ="nome"><br>
+        <label for="name">Adcionar bairro: </label>
+        <input type="name" name ="bairro" id ="nome"><br>
+        <label for="name">Adcionar nuemro: </label>
+        <input type="number" name ="numero" id ="nome"><br>
+        <button type="submit">Salvar</button>
+        <a href="indexclie.php"><button type="button">Cancelar</button></a>
+     </form>      
+</body>
+</html>

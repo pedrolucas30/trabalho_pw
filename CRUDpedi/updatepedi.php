@@ -6,9 +6,9 @@
     $pedidos = $_POST['pedidos'];
     $preco = $_POST['preco'];
     $id = $_POST['id'];
-    $stmt = $connect->prepare("UPDATE pedidos SET nome = :nome, pedidos = :pedidos, preco = :preco WHERE id = :id");
+    $stmt = $connect->prepare("UPDATE pedidos SET nome = :nome, pedido = :pedido, preco = :preco WHERE id = :id");
     $stmt->bindValue(":nome", $nome);
-    $stmt->bindValue(":pedidos", $pedidos);
+    $stmt->bindValue(":pedido", $pedidos);
     $stmt->bindValue(":preco", $preco);
     $stmt->bindValue(":id", $id);
 
@@ -45,7 +45,7 @@
         <label for="name">Atualizar pedidos</label><br><br>
         Comida: <input type="text" name="nome" value="<?php echo $card->nome; ?>"><br>
 
-        Pedidos: <input type="text" name="pedidos" value="pedidos" id="pedidos" <?php echo $card->pedidos; ?>><br>
+        Pedidos: <input type="text" name="pedidos" value="<?php echo $card->pedido; ?>" id="pedidos" ><br>
 
         Preço: <input type="number" name="preco" value="<?php echo $card->preco; ?>"><br>
         <button type="submit">Salvar</button>

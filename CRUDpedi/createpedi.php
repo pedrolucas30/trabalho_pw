@@ -1,25 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar pedido</title>
-
-</head>
-<body>
-    <h1> Adicionar novos pedidos</h1><br>
-     <form action="createpedi.php" method="post">
-        <label for="name">Adcionar nome: </label>
-        <input type="text" name ="nome" id ="nome"><br>
-        <label for="name">Adcionar pedido: </label>
-        <input type="text" name ="pedido" id ="nome"><br>
-        <label for="name">Adcionar preço: </label>
-        <input type="number" name ="preco" id ="nome"><br>
-        <button type="submit">Salvar</button>
-        <a href="indexpedi.php"><button type="button">Cancelar</button></a>
-     </form>      
-</body>
-</html>
 <?php 
 include '../conexao.php';
 
@@ -44,3 +22,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar pedido</title>
+
+</head>
+<body>
+    <h1> Adicionar novos pedidos</h1><br>
+     <form action="createpedi.php" method="post">
+        <label for="name">Adcionar nome: </label>
+        <input type="text" name ="nome" id ="nome"><br>
+        <label for="name">Adcionar pedido: </label>
+        <input type="text" name ="pedido" id ="nome"><br>
+        <label for="name">Adcionar preço: </label>
+        <input type="number" name ="preco" id ="nome"><br>
+        <button type="submit">Salvar</button>
+        <a href="indexpedi.php"><button type="button">Cancelar</button></a>
+     </form>      
+</body>
+</html>
