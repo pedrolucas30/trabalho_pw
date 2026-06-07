@@ -1,3 +1,3 @@
 <?php
-$connect = new PDO("mysql:host=localhost;dbname=trabalho_pw","root" , "");
-$connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$connect = new PDO("mysql:host=db;dbname=trabalho_PW;charset=utf8", "root", "root");
+$connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
